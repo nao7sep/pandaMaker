@@ -22,4 +22,12 @@
         <InformationalVersion></InformationalVersion>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\yyLib\yyLib\yyLib.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\yyGptLib\yyGptLib\yyGptLib.csproj" />
+    </ItemGroup>
+
 </Project>
