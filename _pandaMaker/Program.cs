@@ -7,21 +7,21 @@ namespace _pandaMaker;
 
 class Program
 {
-    static void Main (string[] args)
+    static void Main (string [] args)
     {
         var xConnectionInfo = new yyGptImagesConnectionInfo { ApiKey = yyUserSecrets.Default.OpenAi!.ApiKey! };
 
-        string [] xMessages = { "OK!", "Sure!", "OMG!", "No problem!", "Thank you!", "Sorry!" };
+        string [] xMessages = ["OK!", "Sure!", "OMG!", "No problem!", "Thank you!", "Sorry!", "No way!"];
 
         foreach (string xMessage in xMessages)
         {
-            Parallel.For (0, 3,
+            Parallel.For (0, 10,
                 new ParallelOptions { MaxDegreeOfParallelism = 1 }, // Rate limit appears to be easy to reach
                 x =>
             {
                 var xRequest = new yyGptImagesRequest
                 {
-                    Prompt = $"A cute or funny or bossy panda that says, '{xMessage}'",
+                    Prompt = $"A cute or funny or arrogant panda that says '{xMessage}'. Please dont make the image photorealistic. The image must contain only one panda in a various place. Please make the image happy and friendly.",
 
                     Model = "dall-e-3",
                     Quality = "hd",
