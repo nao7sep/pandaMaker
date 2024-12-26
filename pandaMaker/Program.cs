@@ -1,7 +1,6 @@
 ﻿using System.Text;
 
 using yyLib;
-using yyGptLib;
 
 namespace pandaMaker;
 
