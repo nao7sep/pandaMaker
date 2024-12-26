@@ -3,7 +3,7 @@
 using yyLib;
 using yyGptLib;
 
-namespace _pandaMaker;
+namespace pandaMaker;
 
 class Program
 {
